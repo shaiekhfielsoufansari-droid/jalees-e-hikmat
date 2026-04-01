@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* --- کاپی پروٹیکشن CSS --- */
+        body { 
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Segoe UI', Tahoma; 
+            /* پہلی جگہ: باڈی وال پیپر */
+            background-image: url('pg2.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            min-height: 100vh; display: flex; flex-direction: column; margin: 0; padding: 0; width: 100%; overflow-x: hidden; 
+        }
+
+        /* واپسی بٹن اسٹائل */
+        .back-home-btn {
+            position: fixed; top: 20px; left: 20px; z-index: 9999;
+            background: rgba(0, 0, 0, 0.85); color: #fbbf24;
+            padding: 10px 25px; border-radius: 50px; border: 2px solid #fbbf24;
+            text-decoration: none; font-weight: bold;
+            display: flex; align-items: center; gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6); transition: 0.3s;
+        }
+        .back-home-btn:hover { background: #fbbf24; color: black; transform: scale(1.05); }
+
+        /* لکھنے والی جگہ پر سلیکشن کی اجازت دینا */
+        input, textarea {
+            -webkit-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        .nastaliq { font-family: 'Noto Nastaliq Urdu', serif; }
+        
+        @keyframes blink-animation {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .blink-icon { animation: blink-animation 1.5s infinite ease-in-out; display: inline-block; }
+
+        .main-header {
+            /* دوسری جگہ: ہیڈر وال پیپر */
+            background-image: url('pg2.jpg');
+            background-size: cover; background-position: center;
+            color: #fbbf24; padding: 3.5rem 1rem; border-bottom: 6px solid #d97706;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6); width: 100%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+
+        .header-title { 
+            font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.2;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.9); margin-bottom: 30px; 
+        }
+
+        .name-badge {
+            background: rgba(0, 0, 0, 0.85); color: #ffffff;
+            font-family: 'Arial', sans-serif; padding: 12px 40px;
+            border-radius: 50px; border: 2px solid #fbbf24;
+            font-size: clamp(1.2rem, 3.5vw, 1.8rem); font-weight: 900;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+            margin-top: 20px; display: inline-block;
+        }
+
+        .contact-info { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 2.5rem; color: #ffffff; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 8px; direction: ltr; background: rgba(0,0,0,0.8); padding: 8px 20px; border-radius: 25px; border: 1px solid rgba(251, 191, 36, 0.5); font-size: 1rem; font-weight: bold; }
+
+        .input-section {
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+            padding: 2.5rem 1rem; border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 100%;
+        }
+
+        .result-box-style {
+            /* تیسری جگہ: رزلٹ باکس وال پیپر */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pg2.jpg');
+            background-size: cover; background-position: center;
+            border-top: 2px solid rgba(251, 191, 36, 0.6); border-bottom: 2px solid rgba(251, 191, 36, 0.6);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7); width: 100%;
+        }
+
+        .btn-abjad { background-color: #d97706; color: white; } 
+        .btn-shamsi { background-color: #78350f; color: white; } 
+        .btn-clear { background-color: #1e293b; color: white; } 
+
+        .footer-copyright {
+            margin-top: auto; padding: 1.5rem 0;
+            /* چوتھی جگہ: فوٹر وال پیپر */
+            background-image: url('pg2.jpg');
+            background-size: cover; border-top: 4px solid #d97706; width: 100%; position: relative; text-align: center;
+        }
+        .footer-overlay { background: rgba(0, 0, 0, 0.85); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; }
+        .copyright-content { position: relative; z-index: 2; color: #ffffff; font-size: 1.1rem; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .golden-text { color: #fbbf24; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home-btn">
+        <i class="fas fa-arrow-right"></i>
+        <span class="nastaliq">واپس جائیں</span>
+    </a>
+
+    <header class="main-header">
+        <div class="nastaliq header-title">ابجد کیلکولیٹر</div>
+        <div class="name-badge">شیخ فیلسوف انصاری</div>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone-alt text-green-400 blink-icon"></i> 0311-1855512</div>
+            <div class="contact-item"><i class="fab fa-whatsapp text-green-500 blink-icon"></i> 0300-0210419</div>
+        </div>
+    </header>
+
+    <main class="w-full flex-grow flex flex-col items-center">
+        <section class="input-section">
+            <div class="max-w-4xl mx-auto w-full px-4 text-center">
+                <input type="text" id="userInput" placeholder="عبارت یہاں لکھیں..." class="w-full p-4 border-2 border-amber-500 rounded-xl text-xl md:text-2xl text-center font-bold outline-none shadow-lg bg-white text-slate-900 focus:ring-4 focus:ring-amber-400 mb-6">
+                
+                <div class="flex flex-col gap-3">
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <button onclick="calculate('qamri')" class="btn-abjad px-4 py-4 rounded-xl font-bold hover:opacity-90 shadow-md flex-1 transition-transform active:scale-95">ابجدِ قمری</button>
+                        <button onclick="calculate('shamsi')" class="btn-shamsi px-4 py-4 rounded-xl font-bold hover:opacity-90 shadow-md flex-1 transition-transform active:scale-95">ابجدِ شمسی</button>
+                        <button onclick="calculate('malfoozi')" class="btn-abjad px-4 py-4 rounded-xl font-bold hover:opacity-90 shadow-md flex-1 transition-transform active:scale-95">ابجدِ ملفوظی</button>
+                    </div>
+                    <button onclick="clearAll()" class="btn-clear w-full py-4 rounded-xl font-bold hover:opacity-90 shadow-md transition-transform active:scale-95">صاف کریں</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="resultView" class="hidden w-full">
+            <div class="result-box-style p-10 md:p-20 text-center">
+                <h3 id="methodTitle" class="nastaliq text-4xl text-amber-400 mb-8 font-bold"></h3>
+                
+                <p id="finalSum" class="text-8xl md:text-9xl font-bold text-white drop-shadow-2xl">0</p>
+                
+                <div class="mt-8 flex gap-4 justify-center">
+                    <i class="fas fa-star text-amber-400 text-3xl blink-icon"></i>
+                    <i class="fas fa-star text-amber-400 text-3xl blink-icon"></i>
+                    <i class="fas fa-star text-amber-400 text-3xl blink-icon"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-copyright">
+        <div class="footer-overlay"></div>
+        <div class="copyright-content nastaliq">
+            <span class="golden-text text-2xl">©</span> 2026 <span class="mx-2 text-amber-600">|</span> جملہ حقوق بحق <span class="golden-text mx-1">شیخ فیلسوف انصاری</span> محفوظ ہیں
+        </div>
+    </footer>
+
+<script>
+    /* --- کاپی پروٹیکشن JavaScript --- */
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'u' || e.key === 's' || e.key === 'i')) {
+            if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+            }
+        }
+    });
+
+    const qamriMap = {
+        'ا':1,'آ':1,'أ':1,'ب':2,'پ':2,'ج':3,'چ':3,'د':4,'ڈ':4,'ہ':5,'ھ':5,'ۂ':5,'ۃ':5,'ة':5,'و':6,'ؤ':6,'ز':7,'ژ':7,'ح':8,'ط':9,'ی':10,'ئے':10,'ے':10,'ي':10,'ئ':10,'ک':20,'گ':20,'ل':30,'م':40,'ن':50,'ں':50,'س':60,'ع':70,'ف':80,'ص':90,'ق':100,'ر':200,'ڑ':200,'ش':300,'ت':400,'ٹ':400,'ث':500,'خ':600,'ذ':700,'ض':800,'ظ':900,'غ':1000
+    };
+    
+    const shamsiMap = {
+        'ا':1,'آ':1,'أ':1,'ب':2,'پ':2,'ت':3,'ٹ':3,'ث':4,'ج':5,'چ':5,'ح':6,'خ':7,'د':8,'ڈ':8,'ذ':9,'ر':10,'ڑ':10,'ز':20,'ژ':20,'س':30,'ش':40,'ص':50,'ض':60,'ط':70,'ظ':80,'ع':90,'غ':100,'ف':200,'ق':300,'ک':400,'گ':400,'ل':500,'m':600,'ن':700,'ں':700,'و':800,'ؤ':800,'ہ':900,'ھ':900,'ی':1000,'ے':1000,'ئ':1000
+    };
+
+    const malfooziNames = {
+        'ا':'الف','ب':'با','پ':'با','ج':'جیم','چ':'جیم','د':'دال','ڈ':'دال','ہ':'ہا','ھ':'ہا','و':'واؤ','ز':'زا','ژ':'زا','ح':'حا','ط':'طا','ی':'یا','ے':'یا','ئ':'یا','ک':'کاف','گ':'کاف','ل':'لام','م':'میم','ن':'نون','ں':'نون','س':'سین','ع':'عین','ف':'فا','ص':'صاد','ق':'قاف','ر':'را','ڑ':'را','ش':'شین','ت':'تا','ٹ':'تا','ث':'ثا','خ':'خا','ذ':'ذال','ض':'ضاد','ظ':'ظا','غ':'غین'
+    };
+
+    function normalize(text) {
+        return text
+            .replace(/[ھۂۃة\u06C1\u06BE\u0647]/g, 'ہ')
+            .replace(/[ئےىي\u06CC\u064A]/g, 'ی')
+            .replace(/[آأإ]/g, 'ا')
+            .replace(/[ؤ]/g, 'و');
+    }
+
+    function clearAll() {
+        document.getElementById('userInput').value = "";
+        document.getElementById('resultView').classList.add('hidden');
+    }
+
+    function calculate(type) {
+        let input = document.getElementById('userInput').value;
+        if (!input) return;
+
+        document.getElementById('resultView').classList.remove('hidden');
+        
+        let rawChars = input.match(/[\u0600-\u06FF]/g) || [];
+        let cleanText = rawChars.join('').replace(/[\u064B-\u065F\u0670\u0610-\u061A\s]/g, "");
+        
+        let total = 0;
+
+        if (type === 'qamri') {
+            document.getElementById('methodTitle').innerText = "ابجدِ قمری";
+            for(let char of cleanText) { 
+                let n_char = normalize(char);
+                total += (qamriMap[n_char] || qamriMap[char] || 0); 
+            }
+        } 
+        else if (type === 'shamsi') {
+            document.getElementById('methodTitle').innerText = "ابجدِ شمسی";
+            for(let char of cleanText) { 
+                let n_char = normalize(char);
+                total += (shamsiMap[n_char] || shamsiMap[char] || 0); 
+            }
+        }
+        else if (type === 'malfoozi') {
+            document.getElementById('methodTitle').innerText = "ابجدِ ملفوظی";
+            let expanded = "";
+            for(let char of cleanText) { 
+                let n_char = normalize(char);
+                expanded += (malfooziNames[n_char] || malfooziNames[char] || char); 
+            }
+            let flatExpanded = normalize(expanded);
+            for(let char of flatExpanded) { total += (qamriMap[char] || 0); }
+        }
+
+        document.getElementById('finalSum').innerText = total;
+    }
+</script>
+</body>
+  </html>
