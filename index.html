@@ -35,7 +35,6 @@
             margin: 0; padding: 0;
             overflow-x: hidden;
             width: 100%;
-            /* فوٹر کو نیچے لاک کرنے کے لیے اہم تبدیلیاں */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -56,15 +55,15 @@
 
         #star-field { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
 
+        /* ستاروں کی درست اینیمیشن */
         .star {
             position: absolute; background: white; border-radius: 50%; opacity: 0;
-            box-shadow: 0 0 10px white; animation: fly linear infinite;
+            box-shadow: 0 0 10px white; animation: twinkle linear infinite;
         }
 
-        @keyframes fly {
-            0% { transform: translateY(0) scale(0.5); opacity: 0; }
-            30% { opacity: 1; }
-            100% { transform: translateY(-200px) scale(1.2); opacity: 0; }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
         .zodiac-img { 
@@ -137,7 +136,7 @@
             background-image: linear-gradient(rgba(245, 240, 230, 0.6), rgba(245, 240, 230, 0.6)), url('pg3.jpg'); 
             background-size: cover; 
             background-attachment: fixed;
-            flex-grow: 1; /* یہ کالم کو پھیلا کر فوٹر کو نیچے دھکیل دے گا */
+            flex-grow: 1;
         }
         .fee-box { 
             border: 2px solid #f59e0b; border-radius: 20px; padding: 35px 25px; margin: 0 auto 30px auto; 
@@ -168,7 +167,7 @@
             color: #ffffff; padding: 25px 10px; 
             border-top: 4px solid #f59e0b; 
             text-align: center; 
-            margin-top: auto; /* فوٹر کو ہمیشہ بالکل آخر میں رکھے گا */
+            margin-top: auto; 
             width: 100%;
         }
         .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
@@ -296,16 +295,20 @@
         function createStars() {
             const starField = document.getElementById('star-field');
             if(!starField) return;
-            for (let i = 0; i < 150; i++) {
+            for (let i = 0; i < 120; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                const size = Math.random() * 2 + 1 + 'px';
+                const size = Math.random() * 3 + 1 + 'px';
                 star.style.width = size; star.style.height = size;
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-                star.style.animationDuration = Math.random() * 3 + 4 + 's';
-                star.style.animationDelay = Math.random() * 5 + 's';
+                // چمکنے کی رفتار اور وقفہ
+                star.style.animationDuration = Math.random() * 2 + 1.5 + 's';
+                star.style.animationDelay = Math.random() * 3 + 's';
                 starField.appendChild(star);
             }
         }
-        window.onload = createSta
+        window.onload = createStars;
+    </script>
+</body>
+</html>
