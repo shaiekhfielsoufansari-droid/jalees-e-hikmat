@@ -64,12 +64,16 @@
         /* ستاروں کی درست اینیمیشن */
         .star {
     position: absolute;
-    background-color: white !important; /* رنگ کو سفید پر مجبور کرنا */
+    background-color: white !important;
     border-radius: 50%;
-    opacity: 0.8; /* اسے 0 سے بڑھا کر 0.8 کر دیں */
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-    z-index: 9999; /* اسے سب سے اوپر رکھنے کے لیے */
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    z-index: 10; /* تصویر سے اوپر رکھنے کے لیے */
     pointer-events: none;
+    /* اینیمیشن کی بنیادی سیٹنگ */
+    animation-name: twinkle;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes twinkle {
@@ -333,16 +337,17 @@
     <script>
     function createStars() {
         const starField = document.getElementById('star-field');
-        if(!starField || starField.children.length > 50) return; // اگر ستارے بن چکے ہیں تو دوبارہ نہ بنائے
+        if(!starField) return;
         
+        // اگر ستارے پہلے سے موجود ہیں تو دوبارہ نہ بنائے
+        if(starField.children.length > 50) return;
+
         starField.innerHTML = ''; 
-        // زبردستی اسے سب سے اوپر لانے کے لیے
-        starField.style.zIndex = "1";
-        starField.style.opacity = "1";
+        starField.style.zIndex = "5";
 
         for (let i = 0; i < 150; i++) {
             const star = document.createElement('div');
             star.className = 'star';
-            const size = (Math.random() * 2 + 1) + 'px';
-            star.style.width = size; 
-            star.style.he
+            
+            const size = (Math.random() * 2.5 + 1) + 'px';
+            star.style.wid
