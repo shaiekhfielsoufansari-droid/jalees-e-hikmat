@@ -11,25 +11,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* آرٹیکل 5 کے اسٹائل کے مطابق سیٹنگز */
-        body { 
-            background-color: #fdfaf5; 
-            font-family: 'Noto Sans Arabic', serif; 
-            margin: 0; padding: 0; 
-            color: #1a202c; 
-            -webkit-user-select: none; 
-            user-select: none; 
-            line-height: 1.8;
-            overflow-x: hidden;
+        /* سائیڈ کی خالی جگہ ختم کرنے کے لیے بنیادی ترتیبات */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        /* پھیلا ہوا ہیڈر (جیسا آرٹیکل 5 میں ہے) */
+        html, body {
+            width: 100%;
+            overflow-x: hidden; /* دائیں بائیں حرکت روکنے کے لیے */
+            background-color: #fdfaf5;
+            font-family: 'Noto Sans Arabic', serif;
+            color: #1a202c;
+            line-height: 1.8;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* پھیلا ہوا ہیڈر */
         .article-header { 
             background: linear-gradient(135deg, #0d1b3e 0%, #3e2723 100%); 
             color: #ffd700; 
             padding: 60px 20px; 
             text-align: center; 
-            border-bottom: 5px solid #f59e0b; 
+            border-bottom: 5px solid #f59e0b;
+            width: 100%;
         }
 
         .article-header h1 { 
@@ -39,7 +46,7 @@
             line-height: 1.6; 
         }
 
-        /* کنٹینر جو ہیڈر کے اوپر تھوڑا چڑھا ہوا ہے */
+        /* مین کنٹینر */
         .article-container { 
             max-width: 900px; 
             width: 92%;
@@ -49,7 +56,8 @@
             border-radius: 20px; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
             border: 1px solid #e2e8f0; 
-            position: relative; 
+            position: relative;
+            z-index: 10;
         }
 
         .content { 
@@ -73,7 +81,8 @@
             padding: 20px; 
             margin: 25px 0; 
             border-radius: 10px; 
-            font-weight: bold; 
+            font-weight: bold;
+            width: 100%; /* چوڑائی کنٹرول میں رکھنے کے لیے */
         }
 
         .case-study { 
@@ -86,6 +95,11 @@
 
         .case-study h3 { color: #d2151e; margin-top: 0; font-size: clamp(1.2rem, 4vw, 1.5rem); }
 
+        .back-btn-container {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
         .back-btn { 
             display: inline-block; 
             margin-top: 40px; 
@@ -97,20 +111,42 @@
             font-weight: bold; 
             box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3); 
             transition: 0.3s; 
-            text-align: center; 
         }
 
         .back-btn:hover { background: #f59e0b; color: #000 !important; }
 
-        /* فوٹر ڈیزائن */
-        .footer-premium { background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #ffffff; padding: 25px 10px; border-top: 4px solid #f59e0b; text-align: center; margin-top: 50px; }
-        .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
+        /* فوٹر */
+        .footer-premium { 
+            background: linear-gradient(135deg, #1e3a8a, #0f172a); 
+            color: #ffffff; 
+            padding: 25px 10px; 
+            border-top: 4px solid #f59e0b; 
+            text-align: center; 
+            width: 100%;
+        }
+
+        .footer-content { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            flex-wrap: wrap; 
+            font-size: 1.1rem; 
+        }
+
         .gold-name { color: #ffd700; font-weight: bold; }
-        .gold-c-badge { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); display: flex; align-items: center; justify-content: center; color: #331a00; font-weight: 900; }
+        .gold-c-badge { 
+            width: 26px; height: 26px; 
+            border-radius: 50%; 
+            background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); 
+            display: flex; align-items: center; justify-content: center; 
+            color: #331a00; font-weight: 900; 
+        }
 
         @media (max-width: 600px) {
             .content { text-align: right; }
-            .back-btn { width: 100%; }
+            .back-btn { width: 100%; text-align: center; }
+            .article-container { width: 95%; padding: 20px; }
         }
     </style>
 </head>
@@ -127,7 +163,7 @@
 
             <h2>کیا ایک ہی پتھر ہر مرض کا حل ہے؟</h2>
             <p>ہمارے ہاں یہ غلط تصور عام ہے کہ ایک ہی پتھر زندگی کے تمام مسائل حل کر سکتا ہے۔ حقیقت یہ ہے کہ پتھر کا انتخاب آپ کی ضرورت کے مطابق ہوتا ہے:</p>
-            <ul style="list-style-type: square;">
+            <ul style="padding-right: 20px; list-style-type: square;">
                 <li>ذاتی صلاحیتوں میں اضافے کے لیے <strong>"برتھ اسٹون"</strong> (طالع برج کا پتھر)۔</li>
                 <li>تعلیم میں کامیابی کے لیے الگ پتھر۔</li>
                 <li>صحت، ملازمت، شادی یا بیرون ملک سفر کے لیے انفرادی سیاروی پوزیشن دیکھنا ضروری ہے۔</li>
@@ -154,8 +190,10 @@
             <p>عزیزانِ من! کسی ماہر کے مشورے اور مکمل زائچے کے بغیر پتھر پہننا ایسا ہی ہے جیسے بغیر ڈاکٹر کے مشورے کے کوئی بھی دوا کھا لینا، جو فائدے کے بجائے نقصان کا باعث بن سکتا ہے۔</p>
         </div>
 
-        <div style="text-align: center;">
-            <a href="articles.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> تمام مضامین پر واپس جائیں</a>
+        <div class="back-btn-container">
+            <a href="articles.html" class="back-btn">
+                <i class="fa-solid fa-arrow-right"></i> تمام مضامین پر واپس جائیں
+            </a>
         </div>
     </div>
 
