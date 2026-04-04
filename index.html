@@ -64,20 +64,19 @@
         /* ستاروں کی درست اینیمیشن */
         .star {
     position: absolute;
-    background: white;
+    background-color: white !important; /* رنگ کو سفید پر مجبور کرنا */
     border-radius: 50%;
-    opacity: 0.8; /* اسے 0 سے بڑھا کر 0.8 کر دیں تاکہ وہ نظر آئیں */
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    z-index: 5; /* اسے بڑھا دیں تاکہ تصویر کے اوپر رہے */
+    opacity: 0.8; /* اسے 0 سے بڑھا کر 0.8 کر دیں */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    z-index: 9999; /* اسے سب سے اوپر رکھنے کے لیے */
     pointer-events: none;
 }
 
-
-        @keyframes twinkle {
-            0% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0; transform: scale(0.5); }
-        }
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.3; transform: scale(0.8); }
+}
 
 
         .zodiac-img { 
@@ -332,19 +331,20 @@
 
 
     <script>
-        function createStars() {
-            const starField = document.getElementById('star-field');
-            if(!starField) return;
-            
-            starField.innerHTML = ''; 
+    function createStars() {
+        const starField = document.getElementById('star-field');
+        if(!starField) return;
+        
+        starField.innerHTML = ''; 
+        // اس بات کو یقینی بنانا کہ یہ پورے ہیڈر کو کور کرے
+        starField.style.position = 'absolute';
+        starField.style.top = '0';
+        starField.style.left = '0';
+        starField.style.width = '100%';
+        starField.style.height = '100%';
 
-            for (let i = 0; i < 150; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                
-                const size = (Math.random() * 2 + 1) + 'px';
-                star.style.width = size; 
-                star.style.height = size;
-                
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const size = (Math.random() * 2 + 1)
