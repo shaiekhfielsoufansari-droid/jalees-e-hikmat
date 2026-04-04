@@ -336,7 +336,6 @@
         if(!starField) return;
         
         starField.innerHTML = ''; 
-        // اس بات کو یقینی بنانا کہ یہ پورے ہیڈر کو کور کرے
         starField.style.position = 'absolute';
         starField.style.top = '0';
         starField.style.left = '0';
@@ -347,4 +346,6 @@
             const star = document.createElement('div');
             star.className = 'star';
             
-            const size = (Math.random() * 2 + 1)
+            const size = (Math.random() * 2 + 1) + 'px';
+            star.style.width = size; 
+            s
