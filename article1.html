@@ -2,171 +2,128 @@
 <html lang="ur" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>قیمتی پتھروں کا انتخاب - جلیسِ حِکمت</title>
+    
+    <link rel="canonical" href="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/article1.html">
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body {
-            -webkit-user-select: none;
-            user-select: none;
-            background-color: #fdfdfd;
-            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', serif;
-            margin: 0; padding: 0;
+        /* آرٹیکل 5 کے اسٹائل کے مطابق سیٹنگز */
+        body { 
+            background-color: #fdfaf5; 
+            font-family: 'Noto Sans Arabic', serif; 
+            margin: 0; padding: 0; 
+            color: #1a202c; 
+            -webkit-user-select: none; 
+            user-select: none; 
             line-height: 1.8;
-            overflow-x: hidden; /* سکرین سے باہر نکلنے سے روکتا ہے */
+            overflow-x: hidden;
         }
 
-
-        .article-container {
-            width: 95%; /* موبائل پر تھوڑی سی جگہ چھوڑے گا */
-            max-width: 900px;
-            margin: 20px auto;
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        /* پھیلا ہوا ہیڈر (جیسا آرٹیکل 5 میں ہے) */
+        .article-header { 
+            background: linear-gradient(135deg, #0d1b3e 0%, #3e2723 100%); 
+            color: #ffd700; 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-bottom: 5px solid #f59e0b; 
         }
 
-
-        .article-header {
-            background: linear-gradient(135deg, #0d1b3e 0%, #3e2723 100%);
-            color: #ffd700;
-            padding: clamp(30px, 8vw, 60px) 20px;
-            text-align: center;
-            border-bottom: 5px solid #f59e0b;
+        .article-header h1 { 
+            font-family: 'Noto Nastaliq Urdu', serif; 
+            font-size: clamp(1.8rem, 5vw, 2.8rem); 
+            margin: 0; 
+            line-height: 1.6; 
         }
 
-
-        .article-header h1 {
-            font-family: 'Noto Nastaliq Urdu', serif;
-            font-size: clamp(1.8rem, 6vw, 3rem); /* موبائل پر فونٹ چھوٹا ہو جائے گا */
-            margin: 0;
+        /* کنٹینر جو ہیڈر کے اوپر تھوڑا چڑھا ہوا ہے */
+        .article-container { 
+            max-width: 900px; 
+            width: 92%;
+            margin: -40px auto 60px; 
+            background: white; 
+            padding: clamp(20px, 5vw, 50px); 
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+            border: 1px solid #e2e8f0; 
+            position: relative; 
         }
 
-
-        .article-header p {
-            font-size: clamp(1rem, 4vw, 1.4rem);
-            opacity: 0.9;
-            margin-top: 10px;
+        .content { 
+            font-size: clamp(1.1rem, 3vw, 1.3rem); 
+            line-height: 2.2; 
+            text-align: justify; 
         }
 
-
-        .article-content {
-            padding: clamp(20px, 5vw, 40px);
-            font-size: clamp(1.1rem, 3vw, 1.25rem);
-            color: #1e293b;
-            text-align: justify;
+        h2 { 
+            color: #b45309; 
+            border-right: 5px solid #f59e0b; 
+            padding-right: 15px; 
+            margin-top: 35px; 
+            font-family: 'Noto Nastaliq Urdu', serif; 
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
         }
 
-
-        h2 {
-            color: #b45309;
-            border-right: 5px solid #f59e0b;
-            padding-right: 15px;
-            margin-top: 35px;
-            font-family: 'Noto Nastaliq Urdu', serif;
-            font-size: clamp(1.4rem, 5vw, 1.8rem);
+        .highlight-box { 
+            background: #fff9db; 
+            border-right: 5px solid #f59e0b; 
+            padding: 20px; 
+            margin: 25px 0; 
+            border-radius: 10px; 
+            font-weight: bold; 
         }
 
-
-        .highlight-box {
-            background: #fff9db;
-            border-right: 5px solid #f59e0b;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 10px;
-            font-weight: bold;
-            box-sizing: border-box;
+        .case-study { 
+            background: #f1f5f9; 
+            border: 2px dashed #1e3a8a; 
+            padding: clamp(15px, 4vw, 30px); 
+            border-radius: 15px; 
+            margin: 30px 0; 
         }
-
-
-        .case-study {
-            background: #f1f5f9;
-            border: 2px dashed #1e3a8a;
-            padding: clamp(15px, 4vw, 30px);
-            border-radius: 15px;
-            margin: 30px 0;
-        }
-
 
         .case-study h3 { color: #d2151e; margin-top: 0; font-size: clamp(1.2rem, 4vw, 1.5rem); }
 
-
-        .back-nav {
-            display: flex;
-            justify-content: center;
-            padding: 25px;
-            background: #f8fafc;
-        }
-
-
-        .btn-back {
-            text-decoration: none;
-            background: #1e3a8a;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-
-        .btn-back:hover { background: #f59e0b; color: #000; }
-
-
-        /* فوٹر - مکمل ریسپانسیو */
-        .footer-premium { 
-            background: linear-gradient(135deg, #1e3a8a, #0f172a); 
-            color: #ffffff; 
-            padding: 20px 10px; 
-            border-top: 4px solid #f59e0b; 
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 40px; 
+            padding: 12px 30px; 
+            background: linear-gradient(135deg, #1e3a8a, #0d1b3e); 
+            color: white !important; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3); 
+            transition: 0.3s; 
             text-align: center; 
         }
-        .footer-content { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 8px; 
-            flex-wrap: wrap; 
-            font-size: clamp(0.85rem, 3vw, 1.1rem); 
-        }
+
+        .back-btn:hover { background: #f59e0b; color: #000 !important; }
+
+        /* فوٹر ڈیزائن */
+        .footer-premium { background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #ffffff; padding: 25px 10px; border-top: 4px solid #f59e0b; text-align: center; margin-top: 50px; }
+        .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
         .gold-name { color: #ffd700; font-weight: bold; }
-        .gold-c-badge { 
-            width: 22px; height: 22px; 
-            border-radius: 50%; 
-            background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); 
-            display: inline-flex; align-items: center; justify-content: center; 
-            color: #331a00; font-weight: 900; font-size: 0.8rem;
-        }
+        .gold-c-badge { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); display: flex; align-items: center; justify-content: center; color: #331a00; font-weight: 900; }
 
-
-        /* موبائل کے لیے خاص سیٹنگ */
         @media (max-width: 600px) {
-            .article-content { text-align: right; } /* موبائل پر اردو رائٹ الائن زیادہ بہتر لگتی ہے */
-            .article-container { margin: 10px auto; border-radius: 10px; }
-            ul { padding-right: 20px; }
+            .content { text-align: right; }
+            .back-btn { width: 100%; }
         }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
+    <header class="article-header">
+        <h1>قیمتی پتھروں کا انتخاب</h1>
+        <p style="font-size: 1.3rem; color: #f59e0b;">محض شوق یا مکمل سائنس؟</p>
+    </header>
 
     <div class="article-container">
-        <header class="article-header">
-            <h1>قیمتی پتھروں کا انتخاب</h1>
-            <p>محض شوق یا مکمل سائنس؟</p>
-        </header>
-
-
-        <div class="article-content">
+        <div class="content">
             <p>عام طور پر سمجھا جاتا ہے کہ کوئی بھی خوبصورت پتھر انگوٹھی میں جڑوا کر پہن لینے سے قسمت بدل جائے گی، لیکن حقیقت اس کے برعکس ہے۔ پتھروں کا انتخاب اتنا سادہ نہیں کہ ایک نظر دیکھ کر فیصلہ کر لیا جائے؛ یہ باقاعدہ ایک روحانی علاج معالجہ ہے جس میں ہر مسئلے کی دوا الگ ہے۔</p>
-
 
             <h2>کیا ایک ہی پتھر ہر مرض کا حل ہے؟</h2>
             <p>ہمارے ہاں یہ غلط تصور عام ہے کہ ایک ہی پتھر زندگی کے تمام مسائل حل کر سکتا ہے۔ حقیقت یہ ہے کہ پتھر کا انتخاب آپ کی ضرورت کے مطابق ہوتا ہے:</p>
@@ -176,18 +133,15 @@
                 <li>صحت، ملازمت، شادی یا بیرون ملک سفر کے لیے انفرادی سیاروی پوزیشن دیکھنا ضروری ہے۔</li>
             </ul>
 
-
             <h2>سیاروں کی چال: سعد یا نحس؟</h2>
             <p>پتھر کا انتخاب کرتے وقت سب سے اہم چیز سیارے کی پوزیشن ہے۔ یاد رکھیں:</p>
             <p><strong>محتاط رہیں:</strong> مشتری، زہرہ اور قمر جیسے "سعد" (نیک) سمجھے جانے والے سیارے بھی بعض حالات میں "نحس" (برا) اثر دے سکتے ہیں۔</p>
             <p><strong>خطرہ:</strong> اگر کوئی سیارہ آپ کے زائچے میں نحس گھر کا مالک ہے، تو اس کا پتھر پہننا اس کی برائی اور نقصان میں اضافہ کر دے گا۔</p>
 
-
             <div class="highlight-box">
                 <i class="fa-solid fa-star" style="color: #b45309;"></i> &nbsp;
                 سنہری اصول: پتھر ہمیشہ کمزور "سعد" سیارے کو طاقت دینے کے لیے پہنا جاتا ہے، نہ کہ "نحس" سیارے کی برائی ختم کرنے کے لیے۔
             </div>
-
 
             <div class="case-study">
                 <h3><i class="fa-solid fa-circle-info"></i> ایک عبرت انگیز واقعہ</h3>
@@ -196,27 +150,23 @@
                 <p><strong>نتیجہ:</strong> ہم نے وہ پتھر اتروایا اور انہیں <strong>"نیلم"</strong> پہنایا۔ جس کے بعد نہ صرف صحت بہتر ہوئی بلکہ بینک میں رکی ہوئی ترقی بھی مل گئی۔</p>
             </div>
 
-
             <h2>خلاصہ</h2>
             <p>عزیزانِ من! کسی ماہر کے مشورے اور مکمل زائچے کے بغیر پتھر پہننا ایسا ہی ہے جیسے بغیر ڈاکٹر کے مشورے کے کوئی بھی دوا کھا لینا، جو فائدے کے بجائے نقصان کا باعث بن سکتا ہے۔</p>
         </div>
 
-
-        <nav class="back-nav">
-            <a href="articles.html" class="btn-back"><i class="fa-solid fa-arrow-right"></i> مضامین کی فہرست پر واپس جائیں</a>
-        </nav>
+        <div style="text-align: center;">
+            <a href="articles.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> تمام مضامین پر واپس جائیں</a>
+        </div>
     </div>
-
 
     <footer class="footer-premium">
         <div class="footer-content">
-            <span>جلیسِ حِکمت</span> <span style="color:#f59e0b;">|</span>
+            <span class="gold-name">جلیسِ حِکمت</span> <span style="color:#f59e0b;">|</span>
             <div class="gold-c-badge">©</div> <span>2026</span> <span style="color:#f59e0b;">|</span>
             <span class="gold-name">شیخ فیلسوف انصاری</span> <span style="color:#f59e0b;">|</span>
             <span>تمام جملہ حقوق محفوظ ہیں۔</span>
         </div>
     </footer>
-
 
 </body>
 </html>
