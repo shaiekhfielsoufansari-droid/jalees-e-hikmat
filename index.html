@@ -333,19 +333,16 @@
     <script>
     function createStars() {
         const starField = document.getElementById('star-field');
-        if(!starField) return;
+        if(!starField || starField.children.length > 50) return; // اگر ستارے بن چکے ہیں تو دوبارہ نہ بنائے
         
         starField.innerHTML = ''; 
-        starField.style.position = 'absolute';
-        starField.style.top = '0';
-        starField.style.left = '0';
-        starField.style.width = '100%';
-        starField.style.height = '100%';
+        // زبردستی اسے سب سے اوپر لانے کے لیے
+        starField.style.zIndex = "1";
+        starField.style.opacity = "1";
 
         for (let i = 0; i < 150; i++) {
             const star = document.createElement('div');
             star.className = 'star';
-            
             const size = (Math.random() * 2 + 1) + 'px';
             star.style.width = size; 
-            s
+            star.style.he
