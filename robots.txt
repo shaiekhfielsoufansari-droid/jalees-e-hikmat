@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+
+# Sitemap Link
+Sitemap: https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/sitemap.xml
