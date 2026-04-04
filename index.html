@@ -63,9 +63,14 @@
 
         /* ستاروں کی درست اینیمیشن */
         .star {
-            position: absolute; background: white; border-radius: 50%; opacity: 0;
-            box-shadow: 0 0 10px white; animation: twinkle linear infinite;
-        }
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8; /* اسے 0 سے بڑھا کر 0.8 کر دیں تاکہ وہ نظر آئیں */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    z-index: 5; /* اسے بڑھا دیں تاکہ تصویر کے اوپر رہے */
+    pointer-events: none;
+}
 
 
         @keyframes twinkle {
@@ -331,18 +336,15 @@
             const starField = document.getElementById('star-field');
             if(!starField) return;
             
-            // پرانے ستارے صاف کرنے کے لیے (اگر ہوں)
             starField.innerHTML = ''; 
 
             for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 
-                // سائز
-                const size = Math.random() * 3 + 1 + 'px';
+                const size = (Math.random() * 2 + 1) + 'px';
                 star.style.width = size; 
                 star.style.height = size;
                 
-                // جگہ (Position)
                 star.style.left = Math.random() * 100 + '%';
-                star.style.top = Mat
+                star.style.top = Math.
