@@ -69,8 +69,9 @@
 
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0.5); }
+            0% { opacity: 0; transform: scale(0.5); }
             50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0.5); }
         }
 
 
@@ -329,15 +330,19 @@
         function createStars() {
             const starField = document.getElementById('star-field');
             if(!starField) return;
-            for (let i = 0; i < 120; i++) {
+            
+            // پرانے ستارے صاف کرنے کے لیے (اگر ہوں)
+            starField.innerHTML = ''; 
+
+            for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
+                
+                // سائز
                 const size = Math.random() * 3 + 1 + 'px';
-                star.style.width = size; star.style.height = size;
+                star.style.width = size; 
+                star.style.height = size;
+                
+                // جگہ (Position)
                 star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                // چمکنے کی رفتار اور وقفہ
-                star.style.animationDuration = Math.random() * 2 + 1.5 + 's';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starField.appendChild(star);
-      
+                star.style.top = Mat
