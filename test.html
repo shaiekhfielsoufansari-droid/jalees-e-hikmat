@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>شیخ فیلسوف انصاری - جلیسِ حِکمت | روحانی و فلکیاتی رہنمائی</title>
+    <meta name="description" content="جلیسِ حکمت: علمِ جفر، علمِ نجوم، علمِ رمل، علمِ مستحصلہ، علمِ ساعات، علمِ نقوش، علمِ استخراج، علمِ تکسیرات، علمِ تسخیرات، علمِ ابجد اور علمِ عظیمت میں مستند روحانی رہنمائی۔ اب آپ گوگل پر صرف 'Jalees e Hikmat' لکھ کر bhi ہمیں تلاش کر سکتے ہیں۔">
+    <meta name="keywords" content="علم جفر، علم نجوم، علم رمل، علم مستحصلہ، علم ساعات، علم نقوش، علم استخراج، علم تکسیرات، علم تسخیرات، علم ابجد، علم عظیمت، روحانی علاج، کراچی، شیخ فیلسوف انصاری، جلیس حکمت، Jalees e Hikmat">
+    <meta name="author" content="Sheikh Feelsoof Ansari">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/">
+    <meta property="og:title" content="شیخ فیلسوف انصاری - جلیسِ حِکمت">
+    <meta property="og:description" content="روحانی علوم، جفر، نجوم اور رمل کے ذریعے آپ کے مسائل کا حل۔">
+    <meta property="og:image" content="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="شیخ فیلسوف انصاری - جلیسِ حِکمت">
+    <meta name="twitter:description" content="علمِ جفر و نجوم میں مستند روحانی رہنمائی۔">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; }
+        
+        body {
+            -webkit-user-select: none;
+            user-select: none;
+            background-color: #ffffff;
+            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', serif;
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header-section {
+            position: relative; width: 100%; min-height: 500px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            overflow: hidden; background-color: #000; border-bottom: 5px solid #f59e0b;
+            padding: 20px;
+        }
+
+        .header-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('pg1.jpg');
+            background-size: cover; background-position: center;
+            opacity: 0.8; z-index: 0;
+        }
+
+        #star-field { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            z-index: 1; pointer-events: none; 
+        }
+
+        .star {
+            position: absolute; background-color: #ffffff !important; border-radius: 50%;
+            z-index: 1000 !important; pointer-events: none; display: block !important;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            animation: twinkle infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.2; transform: scale(0.8); }
+        }
+
+        .zodiac-img { 
+    width: 240px; 
+    max-width: 80%; 
+    height: auto; 
+    position: relative; 
+    z-index: 9999;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.9));
+    /* Raftaar ko 60 seconds kar diya gaya hai */
+    animation: rotateLogo 60s linear infinite; 
+    border-radius: 50%;
+    display: block !important;
+}
+
+@keyframes rotateLogo { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
+
+        .institute-name { 
+            font-size: clamp(2rem, 7vw, 4.5rem); color: #ffd700; 
+            text-shadow: 4px 4px 15px rgba(0,0,0,1), 0 0 25px rgba(255, 215, 0, 0.4); 
+            font-weight: 800; position: relative; z-index: 2; text-align: center;
+        }
+
+        .header-section h1 { 
+            color: #ffffff; text-shadow: 3px 3px 10px rgba(0,0,0,1);
+            font-size: clamp(1.2rem, 4.5vw, 2rem); position: relative; z-index: 2; 
+            font-family: 'Noto Nastaliq Urdu', serif; margin-top: 10px; text-align: center;
+        }
+
+        /* --- Tickers CSS (Updated for seamless loop) --- */
+        .ouloom-ticker-container { width: 100%; overflow: hidden; background: #ffd700; padding: 18px 0; border-top: 1px solid #b45309; border-bottom: 1px solid #b45309; }
+        
+        .ouloom-wrap { 
+    display: inline-flex; 
+    white-space: nowrap; 
+    width: max-content; /* یہ لائن کو ٹوٹنے سے روکے گا */
+    animation: scrollRTL 30s linear infinite; 
+}
+
+        @keyframes scrollRTL {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(33.33%); } /* 3 سیٹس کے لیے 33.33% بہترین ہے */
+}
+
+        .science-badge { background: linear-gradient(135deg, #b45309, #78350f); color: white; padding: 10px 25px; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin: 0 15px; border: 2px solid #5a2c0a; }
+        
+        .mahram-notice { font-weight: bold; font-size: 1.3rem; display: block; padding: 15px; width: 100%; animation: warningPulse 1.5s ease-in-out infinite; color: #fff; text-align: center; }
+        @keyframes warningPulse { 0% { background-color: #b91c1c; } 50% { background-color: #ca8a04; } 100% { background-color: #b91c1c; } }
+
+        .news-ticker-container { background: #1e3a8a; width: 100%; padding: 15px 0; overflow: hidden; border-top: 1px solid #f59e0b; border-bottom: 1px solid #f59e0b; }
+        
+        .ticker-wrap { 
+            display: inline-flex; 
+            white-space: nowrap; 
+            width: max-content;
+            animation: continuousScroll 35s linear infinite; 
+        }
+
+        @keyframes continuousScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
+        }
+
+        .ticker-item { color: white; font-size: 1.3rem; font-weight: bold; padding: 0 60px; display: flex; align-items: center; gap: 10px; }
+
+        .takseer-btn-container { padding: 40px 10px; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('pg3.jpg'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .takseer-btn { 
+            display: inline-block; background: linear-gradient(135deg, #0d1b3e 0%, #3e2723 100%); 
+            color: #ffd700; text-decoration: none; padding: 15px 25px; font-size: 1.3rem; 
+            font-weight: bold; border-radius: 50px; border: 3px solid #ffd700; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6); min-width: 220px; text-align: center; 
+        }
+
+        .services-section { 
+            padding: 50px 20px; position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pg2.jpg'); 
+            background-size: cover; background-position: center; background-attachment: fixed; 
+            border-bottom: 4px solid #f59e0b; 
+        }
+        .section-title { font-size: 2.5rem; color: #ffffff; margin-bottom: 40px; position: relative; display: inline-block; z-index: 2; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); font-family: 'Noto Nastaliq Urdu', serif; text-align: center; width: 100%; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 10px; position: relative; z-index: 2; }
+        .service-card { border-radius: 20px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 2px solid #f59e0b; transition: transform 0.3s ease; background: rgba(255, 255, 255, 0.92); text-align: center; }
+        .card-jafar { background: rgba(255, 248, 225, 0.92); } 
+        .card-najoom { background: rgba(227, 242, 253, 0.92); } 
+        .card-istikara { background: rgba(232, 245, 233, 0.92); } 
+        .card-ilaj { background: rgba(243, 229, 245, 0.92); } 
+        .card-ramal { background: rgba(255, 235, 238, 0.92); }
+        .card-mustehslah { background: rgba(224, 247, 250, 0.92); }
+        .service-icon { font-size: 3rem; color: #f59e0b; margin-bottom: 20px; }
+        .urdu-icon { font-family: 'Noto Nastaliq Urdu', serif; font-weight: bold; font-size: 2.5rem; line-height: 1; display: block; margin-bottom: 20px; color: #f59e0b; }
+
+        .service-card h3 { font-size: 1.6rem; color: #d4af37; margin-bottom: 12px; font-weight: 700; }
+        .service-card p { font-size: 1.1rem; color: #334155; line-height: 1.7; font-weight: 600; }
+
+        .content-section { 
+            padding: 50px 20px; 
+            background-image: linear-gradient(rgba(245, 240, 230, 0.6), rgba(245, 240, 230, 0.6)), url('pg3.jpg'); 
+            background-size: cover; background-attachment: fixed; flex-grow: 1;
+        }
+        .fee-box { 
+            border: 2px solid #f59e0b; border-radius: 20px; padding: 35px 25px; margin: 0 auto 30px auto; 
+            background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('pg4.jpg'); 
+            background-size: cover; background-position: center;
+            text-align: center; max-width: 900px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        
+        .contact-box { border: 2px solid #f59e0b; border-radius: 20px; background: #fff; max-width: 900px; margin: 0 auto; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; }
+        .contact-bg-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('pg5.jpg'); background-size: cover; opacity: 0.4; pointer-events: none; }
+        .contact-list { position: relative; z-index: 2; list-style: none; padding: 0; margin: 0; }
+        .contact-item-pro { display: flex; align-items: center; justify-content: space-between; padding: 15px 25px; border-bottom: 1px solid rgba(0,0,0,0.05); gap: 15px; flex-wrap: wrap; }
+        
+        .action-btn { text-decoration: none; padding: 10px 5px; border-radius: 8px; font-size: 1rem; font-weight: bold; color: white; width: 190px; min-width: 190px; text-align: center; flex-shrink: 0; }
+        .call-btn { background: linear-gradient(135deg, #007bff, #0056b3); }
+        .wa-btn { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .email-btn { background: linear-gradient(135deg, #d44638, #b23124); }
+        .fb-btn { background: linear-gradient(135deg, #1877F2, #0d47a1); }
+        .map-btn { background: linear-gradient(135deg, #ea4335, #c62828); }
+
+        .info-group { display: flex; align-items: center; gap: 12px; flex-grow: 1; justify-content: flex-end; min-width: 200px; }
+        .main-text { font-size: 1.3rem; font-weight: bold; color: #1e293b; text-align: right; word-break: break-all; }
+        .address-text { font-size: 1.15rem; font-weight: bold; color: #1e293b; text-align: right; }
+        .icon-box { font-size: 1.6rem; min-width: 35px; text-align: center; display: flex; justify-content: center; align-items: center; }
+
+        .footer-premium { 
+    background: linear-gradient(135deg, #1e3a8a, #0f172a); 
+    color: #ffffff; 
+    padding: 25px 10px; 
+    border-top: 4px solid #f59e0b; 
+    text-align: center; 
+    width: 100%;
+    margin-top: auto; /* یہ اسے خودکار طور پر نیچے رکھے گا */
+    position: relative;
+    z-index: 10;
+}
+        .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
+        .gold-name { color: #ffd700; font-weight: bold; }
+        .gold-c-badge { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); display: flex; align-items: center; justify-content: center; color: #331a00; font-weight: 900; }
+
+        @media (max-width: 600px) {
+            .contact-item-pro { flex-direction: column-reverse; text-align: center; }
+            .info-group { justify-content: center; margin-bottom: 10px; }
+            .action-btn { width: 100%; }
+            .main-text, .address-text { text-align: center; }
+            .takseer-btn { width: 90%; min-width: unset; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <header class="header-section">
+        <div class="header-bg"></div>
+        <div id="star-field"></div>
+        <img src="./logo.png" alt="شیخ فیلسوف انصاری لوگو" class="zodiac-img">
+        <div class="institute-name">جلیسِ حِکمت</div>
+        <h1>شیخ فیلسوف انصاری</h1>
+    </header>
+
+    <div class="ouloom-ticker-container">
+    <div class="ouloom-wrap">
+        <div class="science-badge">جفر</div><div class="science-badge">رمل</div><div class="science-badge">نجوم</div><div class="science-badge">ساعات</div><div class="science-badge">استخراج</div><div class="science-badge">تکسیرات</div><div class="science-badge">تسخیرات</div><div class="science-badge">نقوش</div>
+        
+        <div class="science-badge">جفر</div><div class="science-badge">رمل</div><div class="science-badge">نجوم</div><div class="science-badge">ساعات</div><div class="science-badge">استخراج</div><div class="science-badge">تکسیرات</div><div class="science-badge">تسخیرات</div><div class="science-badge">نقوش</div>
+        
+        <div class="science-badge">جفر</div><div class="science-badge">رمل</div><div class="science-badge">نجوم</div><div class="science-badge">ساعات</div><div class="science-badge">استخراج</div><div class="science-badge">تکسیرات</div><div class="science-badge">تسخیرات</div><div class="science-badge">نقوش</div>
+    </div>
+</div>
+
+    <span class="mahram-notice">📢 خواتین اپنے محرم کے ساتھ آئیں، اکیلے آنے پر ملاقات نہیں کی جائے گی</span>
+
+    <div class="news-ticker-container">
+    <div class="ticker-wrap">
+        <div class="ticker-item"><i class="fa-solid fa-clock-rotate-left" style="color:#ffd700;"></i> ملاقات کا وقت: صبح 10 بجے سے شام 4 بجے تک (اتوار اور جمعہ تعطیل)</div>
+        <div class="ticker-item"><i class="fa-solid fa-clock-rotate-left" style="color:#ffd700;"></i> ملاقات کا وقت: صبح 10 بجے سے شام 4 بجے تک (اتوار اور جمعہ تعطیل)</div>
+        <div class="ticker-item"><i class="fa-solid fa-clock-rotate-left" style="color:#ffd700;"></i> ملاقات کا وقت: صبح 10 بجے سے شام 4 بجے تک (اتوار اور جمعہ تعطیل)</div>
+        <div class="ticker-item"><i class="fa-solid fa-clock-rotate-left" style="color:#ffd700;"></i> ملاقات کا وقت: صبح 10 بجے سے شام 4 بجے تک (اتوار اور جمعہ تعطیل)</div>
+    </div>
+</div>
+
+    <div class="takseer-btn-container">
+        <a href="abjad.html" class="takseer-btn"><i class="fa-solid fa-calculator"></i> ابجدی کیلکولیٹر</a>
+        <a href="takseer.html" class="takseer-btn"><i class="fa-solid fa-calculator"></i> تکسیری کیلکولیٹر</a>
+        <a href="vedic.html" class="takseer-btn"><i class="fa-solid fa-dharmachakra"></i> ویدک زائچہ</a>
+        <a href="asbaaq.html" class="takseer-btn"><i class="fa-solid fa-book-open"></i> تربیتی اسباق</a>
+        <a href="articles.html" class="takseer-btn"><i class="fa-solid fa-book-open-reader"></i> علمی مضامین</a>
+    </div>
+
+    <section class="services-section">
+        <h2 class="section-title">ہماری خدمات</h2>
+        <div class="services-grid">
+            <div class="service-card card-jafar"><div class="service-icon"><i class="fa-solid fa-scroll"></i></div><h3>علمِ جفر</h3><p>حروف اور اعداد کی مدد سے مشکلات کا حل اور مستند رہنمائی حاصل کریں۔</p></div>
+            <div class="service-card card-najoom"><div class="service-icon"><i class="fa-solid fa-moon"></i></div><h3>علمِ نجوم</h3><p>سیارگان کی چال اور بروج کی روشنی میں اپنے حالات کا جائزہ لیں۔</p></div>
+            <div class="service-card card-ramal"><div class="service-icon"><i class="fa-solid fa-dice"></i></div><h3>علمِ رمل</h3><p>ہماری خدمات دستیاب ہیں۔</p></div>
+            <div class="service-card card-mustehslah"><span class="urdu-icon">ا ب ج</span><h3>علمِ مُستَحْصَلَہ</h3><p>ہماری خدمات دستیاب ہیں۔</p></div>
+            <div class="service-card card-istikara"><div class="service-icon"><i class="fa-solid fa-hands-praying"></i></div><h3>استخارہ</h3><p>کاروبار، رشتہ یا کسی بھی اہم فیصلے کے لیے روحانی مشورہ۔</p></div>
+            <div class="service-card card-ilaj"><div class="service-icon"><i class="fa-solid fa-book-quran"></i></div><h3>روحانی علاج</h3><p>قرآنی آیات اور دعاؤں کے ذریعے روحانی مسائل کا حل۔</p></div>
+        </div>
+    </section>
+
+    <div class="content-section">
+        <div class="fee-box">
+            <div style="color: #d2151e; font-weight: bold; font-size: 1.8rem;">ہدیہ فی سوال: 500 روپے</div>
+            <div style="color: #1e3a8a; font-size: 1.5rem; font-weight: bold; margin-top: 12px;">مِل کر یا بذریعہ JazzCash: <span style="color:#d2151e;">03000210419</span></div>
+        </div>
+
+        <div class="contact-box">
+            <div class="contact-bg-overlay"></div>
+            <div class="contact-list">
+                <div class="contact-item-pro">
+    <a href="tel:03111855512" class="action-btn call-btn">رابطہ برائے کال</a>
+    <div class="info-group">
+        <span class="main-text">03111855512</span>
+        <div class="icon-box" style="border: none; background: none; box-shadow: none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" style="width: 30px; height: auto; display: block;">
+</div>
+    </div>
+</div>
+
+<div class="contact-item-pro">
+    <a href="https://wa.me/923000210419" class="action-btn wa-btn">رابطہ برائے واٹس ایپ</a>
+    <div class="info-group">
+        <span class="main-text">03000210419</span>
+        <div class="icon-box" style="border: none; background: none; box-shadow: none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: auto; display: block;">
+</div>
+    </div>
+</div>
+
+                <div class="contact-item-pro">
+                    <a href="https://web.facebook.com/shiekh.ansari.9" target="_blank" class="action-btn fb-btn">فیس بک پروفائل</a>
+                    <div class="info-group">
+                        <span class="main-text">Sheikh Ansari</span>
+                        <div class="icon-box" style="border: none; background: none; box-shadow: none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" style="width: 30px; height: auto; display: block;">
+</div>
+                    </div>
+                </div>
+
+                <div class="contact-item-pro">
+                    <a href="mailto:feelsoof123@gmail.com" class="action-btn email-btn">رابطہ برائے ای میل</a>
+                    <div class="info-group">
+                        <span class="main-text">feelsoof123@gmail.com</span>
+                        <div class="icon-box">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" style="width: 30px; height: auto;">
+</div>
+                    </div>
+                </div>
+
+                <div class="contact-item-pro">
+                    <a href="https://www.google.com/maps/search/100+Quarters+Usman+Town+Korangi+5+Karachi" target="_blank" class="action-btn map-btn">لوکیشن میپ</a>
+                    <div class="info-group">
+                        <span class="address-text">100 کوارٹر، عثمان ٹاؤن، نزد مسجدِ الٰہیہ، کورنگی نمبر 5، کراچی</span>
+                        <div class="icon-box">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" style="width: 25px; height: auto;">
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-pr
