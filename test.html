@@ -11,13 +11,11 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/">
 
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/">
     <meta property="og:title" content="شیخ فیلسوف انصاری - جلیسِ حِکمت">
     <meta property="og:description" content="روحانی علوم، جفر، نجوم اور رمل کے ذریعے آپ کے مسائل کا حل۔">
     <meta property="og:image" content="https://shaiekhfielsoufansari-droid.github.io/jalees-e-hikmat/logo.png">
-
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="شیخ فیلسوف انصاری - جلیسِ حِکمت">
@@ -30,11 +28,13 @@
         * { box-sizing: border-box; }
         
         body {
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
-
 
         .header-section {
             position: relative; width: 100%; min-height: 500px;
@@ -43,7 +43,6 @@
             padding: 20px;
         }
 
-
         .header-bg {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background-image: url('pg1.jpg');
@@ -51,35 +50,23 @@
             opacity: 0.8; z-index: 0;
         }
 
-
         #star-field { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0;
-    bottom: 0; 
-    z-index: 1; 
-    pointer-events: none;
-    overflow: hidden;
-}
-
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            z-index: 1; pointer-events: none; 
+        }
 
         .star {
-    position: absolute; 
-    background-color: #ffffff !important; 
-    border-radius: 50%;
-    z-index: 1; 
-    opacity: 0.5;
-    /* اینیمیشن کی یہ لائن شامل کریں */
-    animation: twinkle 3s infinite ease-in-out;
-}
+            position: absolute; background-color: #ffffff !important; border-radius: 50%;
+            z-index: 1000 !important; pointer-events: none; display: block !important;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            animation: twinkle infinite ease-in-out;
+        }
 
-@keyframes twinkle {
-    0% { opacity: 0.2; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.2; transform: scale(0.8); }
-}
-
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.2; transform: scale(0.8); }
+        }
 
         .zodiac-img { 
     width: 240px; 
@@ -95,12 +82,10 @@
     display: block !important;
 }
 
-
 @keyframes rotateLogo { 
     from { transform: rotate(0deg); } 
     to { transform: rotate(360deg); } 
 }
-
 
         .institute-name { 
             font-size: clamp(2rem, 7vw, 4.5rem); color: #ffd700; 
@@ -108,13 +93,11 @@
             font-weight: 800; position: relative; z-index: 2; text-align: center;
         }
 
-
         .header-section h1 { 
             color: #ffffff; text-shadow: 3px 3px 10px rgba(0,0,0,1);
             font-size: clamp(1.2rem, 4.5vw, 2rem); position: relative; z-index: 2; 
             font-family: 'Noto Nastaliq Urdu', serif; margin-top: 10px; text-align: center;
         }
-
 
         /* --- Tickers CSS (Updated for seamless loop) --- */
         .ouloom-ticker-container { width: 100%; overflow: hidden; background: #ffd700; padding: 18px 0; border-top: 1px solid #b45309; border-bottom: 1px solid #b45309; }
@@ -126,18 +109,15 @@
     animation: scrollRTL 30s linear infinite; 
 }
 
-
         @keyframes scrollRTL {
     0% { transform: translateX(0); }
     100% { transform: translateX(33.33%); } /* 3 سیٹس کے لیے 33.33% بہترین ہے */
 }
 
-
         .science-badge { background: linear-gradient(135deg, #b45309, #78350f); color: white; padding: 10px 25px; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin: 0 15px; border: 2px solid #5a2c0a; }
         
         .mahram-notice { font-weight: bold; font-size: 1.3rem; display: block; padding: 15px; width: 100%; animation: warningPulse 1.5s ease-in-out infinite; color: #fff; text-align: center; }
         @keyframes warningPulse { 0% { background-color: #b91c1c; } 50% { background-color: #ca8a04; } 100% { background-color: #b91c1c; } }
-
 
         .news-ticker-container { background: #1e3a8a; width: 100%; padding: 15px 0; overflow: hidden; border-top: 1px solid #f59e0b; border-bottom: 1px solid #f59e0b; }
         
@@ -148,15 +128,12 @@
             animation: continuousScroll 35s linear infinite; 
         }
 
-
         @keyframes continuousScroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(50%); }
         }
 
-
         .ticker-item { color: white; font-size: 1.3rem; font-weight: bold; padding: 0 60px; display: flex; align-items: center; gap: 10px; }
-
 
         .takseer-btn-container { padding: 40px 10px; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('pg3.jpg'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
         .takseer-btn { 
@@ -165,7 +142,6 @@
             font-weight: bold; border-radius: 50px; border: 3px solid #ffd700; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.6); min-width: 220px; text-align: center; 
         }
-
 
         .services-section { 
             padding: 50px 20px; position: relative;
@@ -185,21 +161,15 @@
         .service-icon { font-size: 3rem; color: #f59e0b; margin-bottom: 20px; }
         .urdu-icon { font-family: 'Noto Nastaliq Urdu', serif; font-weight: bold; font-size: 2.5rem; line-height: 1; display: block; margin-bottom: 20px; color: #f59e0b; }
 
-
         .service-card h3 { font-size: 1.6rem; color: #d4af37; margin-bottom: 12px; font-weight: 700; }
         .service-card p { font-size: 1.1rem; color: #334155; line-height: 1.7; font-weight: 600; }
 
-
-        .content-section { 
-    padding: 50px 20px 80px 20px; /* نیچے کی پیڈنگ بڑھا دی گئی ہے تاکہ فوٹر سے فاصلہ رہے */
+        .content-section {
+    padding: 50px 20px; 
     background-image: linear-gradient(rgba(245, 240, 230, 0.6), rgba(245, 240, 230, 0.6)), url('pg3.jpg'); 
     background-size: cover; 
-    background-attachment: fixed; 
-    
-    /* یہ حصہ اہم ہے */
-    flex: 1 0 auto; 
-    display: flex;
-    flex-direction: column;
+    background-attachment: fixed;
+    flex: 1 0 auto; /* یہ سب سے اہم لائن ہے */
 }
         .fee-box { 
             border: 2px solid #f59e0b; border-radius: 20px; padding: 35px 25px; margin: 0 auto 30px auto; 
@@ -220,12 +190,10 @@
         .fb-btn { background: linear-gradient(135deg, #1877F2, #0d47a1); }
         .map-btn { background: linear-gradient(135deg, #ea4335, #c62828); }
 
-
         .info-group { display: flex; align-items: center; gap: 12px; flex-grow: 1; justify-content: flex-end; min-width: 200px; }
         .main-text { font-size: 1.3rem; font-weight: bold; color: #1e293b; text-align: right; word-break: break-all; }
         .address-text { font-size: 1.15rem; font-weight: bold; color: #1e293b; text-align: right; }
         .icon-box { font-size: 1.6rem; min-width: 35px; text-align: center; display: flex; justify-content: center; align-items: center; }
-
 
         .footer-premium { 
     background: linear-gradient(135deg, #1e3a8a, #0f172a); 
@@ -234,49 +202,14 @@
     border-top: 4px solid #f59e0b; 
     text-align: center; 
     width: 100%;
-    
-    /* فوٹر کو ہمیشہ نیچے رکھنے کے لیے یہ لائنز شامل کریں */
-    flex-shrink: 0;
-    margin-top: auto; 
+    position: relative;
+    z-index: 10;
+    margin-top: 40px; /* آٹو کے بجائے پکسل دیں */
+    flex-shrink: 0; /* فوٹر کو پچکنے سے روکے گا */
 }
-        .footer-content { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 12px; 
-    flex-wrap: wrap; /* یہ لائن بہت ضروری ہے تاکہ موبائل پر لائن ٹوٹ کر نیچے آ جائے */
-    font-size: 1.1rem; 
-    padding: 5px 15px;
-    text-align: center;
-}
-
-.gold-name { 
-    color: #ffd700; 
-    font-weight: bold; 
-    white-space: nowrap; /* نام کو ٹوٹنے سے روکے گا */
-}
-
-.gold-c-badge { 
-    width: 26px; 
-    height: 26px; 
-    border-radius: 50%; 
-    background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: #331a00; 
-    font-weight: 900; 
-    flex-shrink: 0; /* لوگو کو پچکنے سے روکے گا */
-}
-
-/* موبائل کے لیے خاص ایڈجسٹمنٹ */
-@media (max-width: 600px) {
-    .footer-content {
-        gap: 8px;
-        font-size: 0.95rem; /* چھوٹی اسکرین پر فونٹ تھوڑا چھوٹا */
-    }
-}
-
+        .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
+        .gold-name { color: #ffd700; font-weight: bold; }
+        .gold-c-badge { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); display: flex; align-items: center; justify-content: center; color: #331a00; font-weight: 900; }
 
         @media (max-width: 600px) {
             .contact-item-pro { flex-direction: column-reverse; text-align: center; }
@@ -289,7 +222,6 @@
 </head>
 <body oncontextmenu="return false;">
 
-
     <header class="header-section">
         <div class="header-bg"></div>
         <div id="star-field"></div>
@@ -297,7 +229,6 @@
         <div class="institute-name">جلیسِ حِکمت</div>
         <h1>شیخ فیلسوف انصاری</h1>
     </header>
-
 
     <div class="ouloom-ticker-container">
     <div class="ouloom-wrap">
@@ -309,9 +240,7 @@
     </div>
 </div>
 
-
     <span class="mahram-notice">📢 خواتین اپنے محرم کے ساتھ آئیں، اکیلے آنے پر ملاقات نہیں کی جائے گی</span>
-
 
     <div class="news-ticker-container">
     <div class="ticker-wrap">
@@ -322,7 +251,6 @@
     </div>
 </div>
 
-
     <div class="takseer-btn-container">
         <a href="abjad.html" class="takseer-btn"><i class="fa-solid fa-calculator"></i> ابجدی کیلکولیٹر</a>
         <a href="takseer.html" class="takseer-btn"><i class="fa-solid fa-calculator"></i> تکسیری کیلکولیٹر</a>
@@ -330,7 +258,6 @@
         <a href="asbaaq.html" class="takseer-btn"><i class="fa-solid fa-book-open"></i> تربیتی اسباق</a>
         <a href="articles.html" class="takseer-btn"><i class="fa-solid fa-book-open-reader"></i> علمی مضامین</a>
     </div>
-
 
     <section class="services-section">
         <h2 class="section-title">ہماری خدمات</h2>
@@ -344,13 +271,11 @@
         </div>
     </section>
 
-
     <div class="content-section">
         <div class="fee-box">
             <div style="color: #d2151e; font-weight: bold; font-size: 1.8rem;">ہدیہ فی سوال: 500 روپے</div>
             <div style="color: #1e3a8a; font-size: 1.5rem; font-weight: bold; margin-top: 12px;">مِل کر یا بذریعہ JazzCash: <span style="color:#d2151e;">03000210419</span></div>
         </div>
-
 
         <div class="contact-box">
             <div class="contact-bg-overlay"></div>
@@ -365,7 +290,6 @@
     </div>
 </div>
 
-
 <div class="contact-item-pro">
     <a href="https://wa.me/923000210419" class="action-btn wa-btn">رابطہ برائے واٹس ایپ</a>
     <div class="info-group">
@@ -375,7 +299,6 @@
 </div>
     </div>
 </div>
-
 
                 <div class="contact-item-pro">
                     <a href="https://web.facebook.com/shiekh.ansari.9" target="_blank" class="action-btn fb-btn">فیس بک پروفائل</a>
@@ -387,7 +310,6 @@
                     </div>
                 </div>
 
-
                 <div class="contact-item-pro">
                     <a href="mailto:feelsoof123@gmail.com" class="action-btn email-btn">رابطہ برائے ای میل</a>
                     <div class="info-group">
@@ -398,10 +320,15 @@
                     </div>
                 </div>
 
-
                 <div class="contact-item-pro">
                     <a href="https://www.google.com/maps/search/100+Quarters+Usman+Town+Korangi+5+Karachi" target="_blank" class="action-btn map-btn">لوکیشن میپ</a>
                     <div class="info-group">
                         <span class="address-text">100 کوارٹر، عثمان ٹاؤن، نزد مسجدِ الٰہیہ، کورنگی نمبر 5، کراچی</span>
                         <div class="icon-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" style="width: 25px; height: auto;">
+                        </div> 
+                    </div> 
+                </div> 
+            </div> </div> </div> <footer class="footer-premium" style="margin-top: 80px !important; display: block !important; clear: both !important; width: 100% !important;">
+        <div class="footer-content">
+            <span
