@@ -28,13 +28,17 @@
         * { box-sizing: border-box; }
         
         body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
+            -webkit-user-select: none;
+            user-select: none;
+            background-color: #ffffff;
+            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', serif;
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
         .header-section {
             position: relative; width: 100%; min-height: 500px;
@@ -164,13 +168,11 @@
         .service-card h3 { font-size: 1.6rem; color: #d4af37; margin-bottom: 12px; font-weight: 700; }
         .service-card p { font-size: 1.1rem; color: #334155; line-height: 1.7; font-weight: 600; }
 
-        .content-section {
-    padding: 50px 20px; 
-    background-image: linear-gradient(rgba(245, 240, 230, 0.6), rgba(245, 240, 230, 0.6)), url('pg3.jpg'); 
-    background-size: cover; 
-    background-attachment: fixed;
-    flex: 1 0 auto; /* یہ سب سے اہم لائن ہے */
-}
+        .content-section { 
+            padding: 50px 20px; 
+            background-image: linear-gradient(rgba(245, 240, 230, 0.6), rgba(245, 240, 230, 0.6)), url('pg3.jpg'); 
+            background-size: cover; background-attachment: fixed; flex-grow: 1;
+        }
         .fee-box { 
             border: 2px solid #f59e0b; border-radius: 20px; padding: 35px 25px; margin: 0 auto 30px auto; 
             background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('pg4.jpg'); 
@@ -196,17 +198,9 @@
         .icon-box { font-size: 1.6rem; min-width: 35px; text-align: center; display: flex; justify-content: center; align-items: center; }
 
         .footer-premium { 
-    background: linear-gradient(135deg, #1e3a8a, #0f172a); 
-    color: #ffffff; 
-    padding: 25px 10px; 
-    border-top: 4px solid #f59e0b; 
-    text-align: center; 
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    margin-top: 40px; /* آٹو کے بجائے پکسل دیں */
-    flex-shrink: 0; /* فوٹر کو پچکنے سے روکے گا */
-}
+            background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #ffffff; padding: 25px 10px; 
+            border-top: 4px solid #f59e0b; text-align: center; margin-top: auto; width: 100%;
+        }
         .footer-content { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.1rem; }
         .gold-name { color: #ffd700; font-weight: bold; }
         .gold-c-badge { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(145deg, #fff2ac, #f59e0b, #bf953f, #fcf6ba, #b38728); display: flex; align-items: center; justify-content: center; color: #331a00; font-weight: 900; }
@@ -325,10 +319,14 @@
                     <div class="info-group">
                         <span class="address-text">100 کوارٹر، عثمان ٹاؤن، نزد مسجدِ الٰہیہ، کورنگی نمبر 5، کراچی</span>
                         <div class="icon-box">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" style="width: 25px; height: auto;">
-                        </div> 
-                    </div> 
-                </div> 
-            </div> </div> </div> <footer class="footer-premium" style="margin-top: 80px !important; display: block !important; clear: both !important; width: 100% !important;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" style="width: 25px; height: auto;">
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-premium">
         <div class="footer-content">
-            <span
+            <span class="gold-name">
